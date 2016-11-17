@@ -41,7 +41,7 @@ function islandora_ocr_highlighted_solr_search($query, $offset = 0, $limit = -1,
     // surrounding the fragment--on either side--to be able to account for the
     // fragment Solr selects vs what the first token may start with or the last
     // may end with in the HOCR.
-    "hl.fragsize" => max((int) (drupal_strlen($query) * 1.10), 18),
+    "hl.fragsize" => max((int) (drupal_strlen($query) * 5.10), 28),
     "hl.snippets" => "8",
   ) + $params;
 
